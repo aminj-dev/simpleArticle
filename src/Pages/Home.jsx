@@ -10,6 +10,10 @@ export const Home = () => {
           detail. This project demonstrates basic routing and dynamic content
           loading using React Router.
         </p>
+
+        <button>
+          <a href="https://github.com/aminj-dev">My Github</a>
+        </button>
       </div>
     </div>
   );
