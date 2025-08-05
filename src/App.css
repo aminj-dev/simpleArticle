@@ -92,11 +92,16 @@ li a {
   text-decoration: none;
 }
 
+.article-info p {
+  margin: 0.5rem;
+  max-width: 75%;
+}
+
 .article-detail {
   display: flex;
   flex-direction: column;
   background-color: #d2e6e7;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .title {
@@ -104,9 +109,18 @@ li a {
   margin: 3rem 1rem;
   flex-direction: column;
   justify-content: center;
+  background-color: #252525;
+  width: fit-content;
+  padding: 1rem;
+  color: #d2e6e7;
+  border-radius: 1rem;
 }
 
 .article-detail p {
   margin: 3rem 10rem;
   font-size: 1.5rem;
+  background-color: #252525;
+  color: #d2e6e7;
+  padding: 1rem;
+  border-radius: 1rem;
 }

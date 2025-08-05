@@ -1,9 +1,11 @@
+import { useContext } from "react";
 import { useParams } from "react-router-dom";
-import { data } from "../Data/Data";
+import { apiContext } from "../Context/Context";
 
 export const ArticleDetail = () => {
+  const {articles} = useContext(apiContext);
   const { id } = useParams();
-  const article = data.find((a) => a.id === Number(id));
+  const article = articles.find((a) => a.id === Number(id));
   console.log(article);
   console.log(Number(id));
   if (!article)
@@ -14,10 +16,10 @@ export const ArticleDetail = () => {
         <div className="title">
           <h1>{article.title}</h1>
           <span>
-            {article.id} - {article.time}
+            id - userId : {article.id} - {article.userId}
           </span>
         </div>
-        <p>{article.content}</p>
+        <p>{article.body}</p>
       </div>
     );
 };

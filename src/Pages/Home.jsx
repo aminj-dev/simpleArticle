@@ -3,12 +3,14 @@ export const Home = () => {
     <div className="home">
       <div className="welcome-text">
         <h1>
-          Welcome to SimpleArticles — a simple article website built with React
+          Welcome to SimpleArticles <br /> a simple article website built with
+          React
         </h1>
         <p>
-          Here you can browse a list of sample articles and read each one in
-          detail. This project demonstrates basic routing and dynamic content
-          loading using React Router.
+          This project demonstrates dynamic article listing and routing using
+          React. Articles are fetched in real-time from a public API, allowing
+          you to explore each one in detail. React Router is used for
+          client-side navigation and dynamic content rendering.
         </p>
 
         <button>
