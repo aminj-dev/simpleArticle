@@ -23,7 +23,7 @@ export const ArticleDetail = () => {
           </div>
           <p className="max-w-3/4 ">{article.body}</p>
           <button
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/article")}
             className="cursor-pointer bg-[#252525] w-30 h-10 rounded-2xl text-white p-4"
           >
             Back
