@@ -5,18 +5,21 @@ import { MdOutlineMoreHoriz } from "react-icons/md";
 
 export const ArticleList = () => {
   const navigate = useNavigate();
-  const { articles } = useContext(apiContext);
+  const { articles, loading } = useContext(apiContext);
 
+  if(loading === true) return <div className="min-h-screen max-w-screen flex justify-center items-center bg-[#d2e6e7]">
+    <h1 className="text-4xl">Loading...</h1>
+  </div> 
   return (
     <div className="min-h-screen max-w-screen flex justify-center bg-[#d2e6e7]">
-      <ul className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 w-9/10">
+      <ul className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6 w-9/10 mt-4">
         {articles.map((item) => (
           <li
             key={item.id}
             className="relative flex bg-white rounded-2xl md:h-40 h-30"
           >
             <div className="flex flex-col absolute top-2 left-2 w-7/10">
-              <h2 className="font-semibold text-[20px] md:text-[15px] sm:text-[15px]">{item.title}</h2>
+              <h2 className="font-semibold text-[20px] md:text-[15px] sm:text-[15px]"><span className="text-gray-600 font-bold">title :</span> {item.title}</h2>
             </div>
             <button
               onClick={() => navigate(`/article/${item.id}`)}
